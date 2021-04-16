@@ -237,9 +237,6 @@ func SplitNALUs(b []byte) (nalus [][]byte, typ int) {
 			}
 			_val4 = pio.U32BE(_b)
 			_b = _b[4:]
-			if _val4 > uint32(len(_b)) {
-				break
-			}
 		}
 		if len(_b) == 0 {
 			return nalus, NALU_AVCC
